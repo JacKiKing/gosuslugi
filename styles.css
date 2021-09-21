@@ -1,0 +1,9 @@
+.borderLine{
+	border-top: solid 1px gray;
+	width: 300px;
+	padding: 10px;
+	border-radius: 3px;
+}
+.borderLineRight{
+	border-right: solid 1px gray;
+}
