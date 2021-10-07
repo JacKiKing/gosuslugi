@@ -9,29 +9,19 @@
     <!-- development version, includes helpful console warnings -->
 <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
  <script src="russian_names.json"></script>
-    
-<!--     <div id="app-id">
-      
 
-      <div v-for="elem in name"> 
-        {{ elem.Sex }}  
-      </div>
-    </div>
-    <div id="app-name">
-    </div> -->
-
-<div id="containerTable" >      
-    <table>
+<div id="containerTable" >     
+    <table id="tab">
       <thead>
         <tr>
           <th>ID</th>
-          <th>Имя</th>
-          <th>Фамилия</th>
+          <th v-on:click="flagName = !flagName | revName()">Имя</th>
+          <th v-on:click="flagSurname = !flagSurname | revSurname()">Фамилия</th>
           <th>Гендер</th>
         </tr>
       </thead>
       <tbody>
-        <tr v-for="elem in name">
+        <tr class="line" v-for="elem in name">
           <td>{{elem.ID}}</td>
           <td>{{elem.Name}}</td>
           <td>{{elem.Surname}}</td>
@@ -39,6 +29,7 @@
         </tr>
       </tbody>
     </table>
+    <button id="showTab" v-on:click="ShowTable() | ShowHeadTable()">{{ buttonValue }}</button> 
 </div>
 
     <script src="vue.js"></script>
